@@ -61,18 +61,7 @@ function consoleText(greetings, words, category) {
             waiting = false;
           }, 1000)
         } else if (letterCount1 === greeting.length + 1 && waiting === false) {
-          if (console3) {
-            console.log("Console 3 ready to reverse");
-            waiting = true;
-            window.setTimeout(function() {
-            x = -1;
-            letterCount1 += x;
-            waiting = false;
-            }, 1000) 
-          }
-          else {
-            console.log("Hello")
-            console1 = true;
+          console1 = true;
             visible1 = false;
             waiting = true
             window.setTimeout(function() {
@@ -80,15 +69,12 @@ function consoleText(greetings, words, category) {
               }, 2000) 
             window.setTimeout(function() {
               waiting = false;
-              }, 3000) 
-          }
+              }, 3000)
         } else if (waiting === false) {
-          console.log("Write a letter");
           target1.innerHTML = greeting.substring(0, letterCount1)
           letterCount1 += x;
         }
       } else if (go && console1 && !console2) {
-        console.log("Console2")
       if (letterCount2 === 0 && waiting === false) {
           waiting = true;
           target2.innerHTML = cat.substring(0, letterCount2)
@@ -98,18 +84,7 @@ function consoleText(greetings, words, category) {
             waiting = false;
           }, 1000)
         } else if (letterCount2 === cat.length + 1 && waiting === false) {
-          if (console3) {
-            console.log("Reversing")
-            waiting = true;
-            window.setTimeout(function() {
-            x = -1;
-            letterCount2 += x;
-            waiting = false;
-            }, 1000) 
-          }
-          else {
-            console.log("Hello")
-            console2 = true;
+          console2 = true;
             waiting = true
             
             window.setTimeout(function() {
@@ -118,8 +93,6 @@ function consoleText(greetings, words, category) {
             window.setTimeout(function() {
               waiting = false;
               }, 3000) 
-          }
-          
         } else if (waiting === false) {
           target2.innerHTML = cat.substring(0, letterCount2)
           letterCount2 += x;
