@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  
+<div class="flex-container">
+  <div class="unit">
+    <div class="heart">
+      <div class="heart-piece-0"></div>
+      <div class="heart-piece-1"></div>
+      <div class="heart-piece-2"></div>
+      <div class="heart-piece-3"></div>
+      <div class="heart-piece-4"></div>
+      <div class="heart-piece-5"></div>
+      <div class="heart-piece-6"></div>
+      <div class="heart-piece-7"></div>
+      <div class="heart-piece-8"></div>
+    </div>
+  </div>
+</div>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,7 +28,11 @@
   </head>
 
   <body>
-    <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
-    <script src="experiment.js"></script>
+    <div class='console-container' style = "display:flex; flex-direction:column">
+      <div><span id='text1'></span><div class='console-underscore' id='console1'>&#95;</div></div>
+      <div><span id='text2'></span><div class='console-underscore hidden' id='console2'>&#95;</div></div>
+      <div><span id='text3'></span><div class='console-underscore hidden' id='console3'>&#95;</div></div>
+         <script src="./experiment.js"></script>
+    </div>
   </body>
 </html>
