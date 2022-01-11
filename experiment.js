@@ -12,48 +12,36 @@ oReq.send();
 
 // function([string1, string2],target id,[color1,color2])
 function consoleText(greetings, words, category) {
-  var difference = new Date().getTime() - new Date('02/12/2020').getTime();
+  var date_difference = new Date().getTime() - new Date('12/02/2020').getTime();
+  var difference = new Date().getTime() - new Date('11/13/2021').getTime();
+  // To go further back increase the date, the middle number
+  // The result will be word_entry + 2 in the csv
+  var date_days = Math.ceil(date_difference / (1000 * 3600 * 24));
   var days = Math.ceil(difference / (1000 * 3600 * 24));
   var word_entry = days % words.length;
+  console.log("word_entry:")
+  console.log(word_entry)
   var greeting_entry = days % greetings.length;
   var greeting = "Hello ".concat(greetings[greeting_entry]);
   var word = words[word_entry];
   var cat = category[word_entry]
-  // cat[0] = cat[0].toLowerCase()
-  // cat = "Here is ".concat(cat);
+
   cat = cat.concat(":")
   var to_writes = [greeting, cat, word];
   var colors = ["#2191fb","#2191fb","#ef3c2d"];
-  // var writing1 = true;
-  // var writing2 = true;
-  // var writing3 = true;
-  // var visible1 = true;
-  // var visible2 = false;
-  // var visible3 = false;
-  // var console1 = false;
-  // var console2 = false;
-  // var console3 = false;
   var targets = [document.getElementById("text1"), document.getElementById("text2"), document.getElementById("text3")]
-  // var target1 = document.getElementById("text1");
-  // var target2 = document.getElementById("text2");
-  // var target3 = document.getElementById("text3");
+
   targets[0].setAttribute('style', 'color:' + colors[0]);
   targets[1].setAttribute('style', 'color:' + colors[1]);
   targets[2].setAttribute('style', 'color:' + colors[2]);
   cons = [document.getElementById('console1'), document.getElementById('console2'), document.getElementById('console3')]
-  // var con1 = document.getElementById('console1');
-  // var con2 = document.getElementById('console2');
-  // var con3 = document.getElementById('console3');
-  // var letterCount1 = 1;
-  // var letterCount2 = 1;
-  // var letterCount3 = 1;
+
   var visible = true;
   var lettercounts = [1, 1, 1];
   var console_wait = true;
   var x = 1;
   var waiting = false;
-  // var console2_wait = true;
-  // var console3_wait = true;
+
   var go  = false;
 
   var write_count = 0;
